@@ -8,7 +8,9 @@ import java.util.Random;
 public class Prefix {
     private static final String[][] prefixes = {
         { // A
+            "Ab",
             "Abth",
+            "Adv",
             "Aeg",
             "Aegl",
             "Aet",
@@ -23,6 +25,7 @@ public class Prefix {
             "Amph",
             "An",
             "Andr",
+            "Angl",
             "Ankt",
             "Ant",
             "Anthr",
@@ -33,6 +36,7 @@ public class Prefix {
             "Arct",
             "Arg",
             "Art",
+            "Arth",
             "Arv",
             "Arx",
             "Astr",
@@ -61,6 +65,7 @@ public class Prefix {
             "Chr",
             "Cr",
             "Cy",
+            "Cyg",
             "Cygn",
             "Cyr",
         },
@@ -69,6 +74,7 @@ public class Prefix {
             "Dr",
         },
         { // E
+            "Eb",
             "Ebl",
             "Eck",
             "Ed",
@@ -77,6 +83,7 @@ public class Prefix {
             "El",
             "Eldr",
             "Elp",
+            "Elr",
             "Elv",
             "Emp",
             "Emr",
@@ -121,6 +128,7 @@ public class Prefix {
             "Hyst",
         },
         { // I
+            "Ib",
             "Ibr",
             "Ic",
             "Igr",
@@ -135,6 +143,7 @@ public class Prefix {
             "Ipl",
             "Ips",
             "Ir",
+            "Ix",
             "Iz",
         },
         { // J
@@ -168,6 +177,7 @@ public class Prefix {
             "Ob",
             "Oct",
             "Octh",
+            "Od",
             "Ogl",
             "Ohk",
             "Oj",
@@ -228,6 +238,7 @@ public class Prefix {
             "Sph",
             "Spl",
             "St",
+            "Str",
             "Syr",
         },
         { // T
@@ -244,6 +255,7 @@ public class Prefix {
             "Tyth",
         },
         { // U
+            "Ub",
             "Ukl",
             "Ukr",
             "Ul",
@@ -258,6 +270,7 @@ public class Prefix {
             "Ur",
             "Urkl",
             "Uv",
+            "Uz",
         },
         { // V
             "V",
@@ -267,6 +280,7 @@ public class Prefix {
         },
         { // W
             "W",
+            "Wy",
         },
         { // X
             "X",
