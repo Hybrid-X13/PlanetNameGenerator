@@ -27,6 +27,7 @@ public class Prefix {
             "Andr",
             "Angl",
             "Ankt",
+            "Ans",
             "Ant",
             "Anthr",
             "Ap",

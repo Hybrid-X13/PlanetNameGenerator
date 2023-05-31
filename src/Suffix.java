@@ -61,6 +61,7 @@ public class Suffix {
         "eus",
         "ev",
         "ex",
+        "ez",
         "i",
         "ia",
         "iac",
@@ -126,6 +127,7 @@ public class Suffix {
         "ou",
         "ov",
         "ox",
+        "oz",
         "u",
         "ua",
         "ub",
@@ -141,6 +143,7 @@ public class Suffix {
         "uth",
         "uul",
         "ux",
+        "uz",
     };
 
     /**
