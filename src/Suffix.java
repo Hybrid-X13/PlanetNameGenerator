@@ -8,6 +8,7 @@ import java.util.Random;
 public class Suffix {
     private static final String[] suffixes = {
         "a",
+        "ab",
         "ach",
         "adys",
         "ag",
@@ -26,6 +27,7 @@ public class Suffix {
         "ao",
         "aos",
         "aph",
+        "aq",
         "ar",
         "ark",
         "arr",
@@ -65,6 +67,7 @@ public class Suffix {
         "i",
         "ia",
         "iac",
+        "iak",
         "ial",
         "ian",
         "iax",
@@ -113,6 +116,7 @@ public class Suffix {
         "ons",
         "op",
         "ope",
+        "ops",
         "oph",
         "or",
         "orb",
