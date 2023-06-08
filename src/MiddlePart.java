@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -23,6 +24,7 @@ public class MiddlePart {
         "agl",
         "agm",
         "agn",
+        "agr",
         "agv",
         "ah",
         "aij",
@@ -38,6 +40,7 @@ public class MiddlePart {
         "alg",
         "algr", 
         "all",
+        "alm",
         "aln",
         "altr",
         "alv",
@@ -48,8 +51,10 @@ public class MiddlePart {
         "amn",
         "amp",
         "an",
+        "anc",
         "and",
         "andr",
+        "ang",
         "angl",
         "ant",
         "anth",
@@ -60,8 +65,10 @@ public class MiddlePart {
         "ap",
         "aph",
         "aphr",
+        "apl",
         "apr",
         "ar",
+        "arb",
         "ard",
         "arg",
         "ark",
@@ -78,6 +85,7 @@ public class MiddlePart {
         "astr",
         "at", 
         "ath",
+        "athl",
         "atk",
         "atl",
         "atr",
@@ -88,6 +96,7 @@ public class MiddlePart {
         "avn",
         "avr",
         "avl",
+        "aw",
         "ax",
         "axvl",
         "ay",
@@ -104,6 +113,7 @@ public class MiddlePart {
         "edr",
         "eev",
         "eg",
+        "egr",
         "eh",
         "eid",
         "eim",
@@ -128,12 +138,14 @@ public class MiddlePart {
         "emn",
         "en",
         "end",
+        "endr",
         "engl",
         "enj",
         "enl",
         "enm",
         "enn",
         "enr",
+        "ens",
         "ent",
         "entr",
         "env",
@@ -162,6 +174,7 @@ public class MiddlePart {
         "esm",
         "esp",
         "ess",
+        "est",
         "et",
         "eth",
         "ethr",
@@ -175,10 +188,12 @@ public class MiddlePart {
         "exk",
         "eyt",
         "ez",
+        "ezr",
         "iant",
         "ib",
         "ibl",
         "ibr",
+        "ibz",
         "ic",
         "icl",
         "icr",
@@ -211,6 +226,7 @@ public class MiddlePart {
         "iph",
         "ipl",
         "ir",
+        "irc",
         "irg",
         "is",
         "isc",
@@ -224,10 +240,10 @@ public class MiddlePart {
         "iw",
         "ix",
         "iz",
+        "ob",
         "obr",
         "ocl",
         "ocr",
-        "ob",
         "od",
         "og",
         "ogm",
@@ -238,6 +254,7 @@ public class MiddlePart {
         "ol",
         "oldr",
         "olk",
+        "oll",
         "olm",
         "olsc",
         "olt",
@@ -286,11 +303,13 @@ public class MiddlePart {
         "ox",
         "oz",
         "ub",
+        "uc",
         "uch",
         "ucl",
         "ud",
         "udr",
         "ug",
+        "uif",
         "uin",
         "ukr",
         "ul",
@@ -307,6 +326,7 @@ public class MiddlePart {
         "uk",
         "uky",
         "um",
+        "umb",
         "umpt",
         "un",
         "und",
@@ -319,6 +339,7 @@ public class MiddlePart {
         "url",
         "urk",
         "us",
+        "usc",
         "usl",
         "ut",
         "uth",
@@ -344,11 +365,46 @@ public class MiddlePart {
     }
 
     /**
+     * Gets a string from the above array that is only 2 characters in length
+     * 
+     * @return The middle string
+     */
+    public static String getMiddlePart2() {
+        Random rand = new Random();
+        ArrayList<String> middlePart2 = new ArrayList<String>();
+
+        for (int i = 0; i < middlePart.length; i++) {
+            if (middlePart[i].length() == 2) {
+                middlePart2.add(middlePart[i]);
+            }
+        }
+        
+        return middlePart2.get(rand.nextInt(middlePart2.size()));
+    }
+
+    /**
      * Gets the amount of middle part strings
      * 
      * @return The total number of possible middle strings
      */
     public static int getNumMiddleParts() {
         return middlePart.length;
+    }
+
+    /**
+     * Gets the amount of middle part strings that are 2 characters in length
+     * 
+     * @return The total number of possible strings
+     */
+    public static int getNumMiddleParts2() {
+        ArrayList<String> middlePart2 = new ArrayList<String>();
+
+        for (int i = 0; i < middlePart.length; i++) {
+            if (middlePart[i].length() == 2) {
+                middlePart2.add(middlePart[i]);
+            }
+        }
+
+        return middlePart2.size();
     }
 }

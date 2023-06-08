@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -34,29 +35,51 @@ public class Generator {
      * @return The generated name
      */
     public String generateName() {
+        ArrayList<String> nameStrings = new ArrayList<String>();
         String prefix = Prefix.getPrefix();
         String middlePart1 = "";
         String middlePart2 = "";
+        String middlePart3 = "";
         String suffix = "";
         String name = "";
+
+        nameStrings.add(prefix);
         
         if (rand.nextFloat() < 0.5) {
             do {
                 middlePart1 = MiddlePart.getMiddlePart();
             } while (compareNameParts(prefix, middlePart1));
+
+            nameStrings.add(middlePart1);
         }
 
         if (rand.nextFloat() < 0.5) {
             do {
                 middlePart2 = MiddlePart.getMiddlePart();
             } while (compareNameParts(prefix, middlePart1, middlePart2));
+
+            nameStrings.add(middlePart2);
         }
         
         do {
             suffix = Suffix.getSuffix();
         } while (compareNameParts(prefix, middlePart1, middlePart2, suffix));
 
-        name += prefix + middlePart1 + middlePart2 + suffix;
+        nameStrings.add(suffix);
+        
+        if (nameStrings.size() == 4 && rand.nextFloat() < 0.1) {
+            int index = rand.nextInt(3) + 1;
+            
+            do {
+                middlePart3 = MiddlePart.getMiddlePart2();
+            } while (middlePart3.equalsIgnoreCase(nameStrings.get(index)) || middlePart3.equalsIgnoreCase(nameStrings.get(index - 1)));
+
+            nameStrings.add(index, middlePart3);
+        }
+        
+        for (int i = 0; i < nameStrings.size(); i++) {
+            name += nameStrings.get(i);
+        }
 
         return name;
     }
