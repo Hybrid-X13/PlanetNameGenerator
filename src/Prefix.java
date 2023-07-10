@@ -7,11 +7,13 @@ import java.util.Random;
  */
 public class Prefix {
     private static final String[][] prefixes = {
-        { // A
+        {
             "Ab",
             "Abd",
             "Abs",
             "Abth",
+            "Abz",
+            "Ad",
             "Adv",
             "Aeg",
             "Aegl",
@@ -22,14 +24,23 @@ public class Prefix {
             "Agb",
             "Agn",
             "Agr",
+            "Agv",
             "Aj",
+            "Ak",
             "Akr",
             "Akv",
+            "Al",
+            "Alcy",
             "Ald",
             "Alg",
             "Alph",
+            "Alt",
+            "Am",
             "Amph",
+            "Amr",
             "An",
+            "Anc",
+            "And",
             "Andr",
             "Angl",
             "Ankt",
@@ -53,7 +64,9 @@ public class Prefix {
             "Arv",
             "Arx",
             "As",
+            "Asg",
             "Ash",
+            "Askl",
             "Astr",
             "Ath",
             "Athr",
@@ -69,30 +82,34 @@ public class Prefix {
             "Azr",
             "Azt",
         },
-        { // B
+        {
             "B",
             "Bl",
             "Br",
         },
-        { // C
+        {
             "C",
             "Ch",
             "Chl",
             "Chr",
             "Cr",
         },
-        { // D
+        {
             "D",
             "Dr",
         },
-        { // E
+        {
             "Eb",
             "Ebl",
+            "Ech",
             "Eck",
+            "Ecl",
+            "Ect",
             "Ed",
             "Ehw",
             "Ej",
             "Ekn",
+            "Ekt",
             "El",
             "Eldr",
             "Elp",
@@ -105,6 +122,7 @@ public class Prefix {
             "Enc",
             "End",
             "Enr",
+            "Ens",
             "Ent",
             "Entr",
             "Enz",
@@ -126,36 +144,42 @@ public class Prefix {
             "Euph",
             "Eur",
             "Euryb",
+            "Eurym",
+            "Euryt",
+            "Ev",
             "Ex",
             "Ez",
             "Ezr",
         },
-        { // F
+        {
             "F",
             "Fl",
             "Fr",
         },
-        { // G
+        {
             "G",
             "Gl",
             "Gr",
         },
-        { // H
+        {
             "H",
         },
-        { // I
+        {
             "Ib",
             "Ibr",
             "Ic",
+            "Ig",
             "Ign",
             "Igr",
             "Ikr",
             "Ill",
+            "In",
             "Ind",
             "Ingw",
             "Inv",
             "Iob",
             "Ion",
+            "Ioph",
             "Ip",
             "Iph",
             "Ipl",
@@ -164,29 +188,30 @@ public class Prefix {
             "Is",
             "It",
             "Iv",
+            "Iw",
             "Ix",
             "Iz",
         },
-        { // J
+        {
             "J",
             "Jh",
         },
-        { // K
+        {
             "K",
             "Kh",
             "Kl",
             "Kr",
         },
-        { // L
+        {
             "L",
         },
-        { // M
+        { 
             "M",
         },
-        { // N
+        {
             "N",
         },
-        { // O
+        {
             "Ob",
             "Obs",
             "Oc",
@@ -197,6 +222,7 @@ public class Prefix {
             "Ogd",
             "Ogl",
             "Ogn",
+            "Ogr",
             "Ohk",
             "Oj",
             "Ok",
@@ -204,12 +230,15 @@ public class Prefix {
             "Olv",
             "Om",
             "Omn",
+            "On",
             "Onc",
+            "Ond",
             "Oor",
             "Op",
             "Oph",
             "Opt",
-            "Or", 
+            "Or",
+            "Orb",
             "Org",
             "Orgl",
             "Orl",
@@ -220,27 +249,29 @@ public class Prefix {
             "Os",
             "Ost",
             "Ostr",
+            "Ot",
             "Oth",
             "Ov",
             "Ovn",
+            "Our",
             "Ox",
             "Oz",
         },
-        { // P
+        {
             "P",
             "Ph",
             "Phl",
             "Pl",
             "Pr",
         },
-        { // Q
+        {
             "Qu",
         },
-        { // R
+        {
             "R",
             "Rh",
         },
-        { // S
+        {
             "S",
             "Sc",
             "Sh",
@@ -254,16 +285,16 @@ public class Prefix {
             "St",
             "Str",
         },
-        { // T
+        {
             "T",
-            "T'k",
             "Th",
             "Thr",
             "Tr",
         },
-        { // U
+        { 
             "Ub",
             "Ud",
+            "Ug",
             "Ukl",
             "Ukr",
             "Ul",
@@ -276,33 +307,34 @@ public class Prefix {
             "Uobr",
             "Ups",
             "Ur",
+            "Urgl",
             "Urkl",
             "Urs",
             "Uv",
             "Ux",
             "Uz",
         },
-        { // V
+        {
             "V",
             "Vl",
             "Vr",
         },
-        { // W
+        {
             "W",
         },
-        { // X
+        {
             "X",
             "Xh",
         },
-        { // Y
+        { 
             "Y",
             "Yh",
         },
-        { // Z
+        {
             "Z",
             "Zh",
         },
-        { // ""y prefixes to prevent bloat in each letter
+        { // More complex prefixes, separated to prevent bloat in each letter
             "Cryx",
             "Cy",
             "Cyg",
@@ -328,6 +360,7 @@ public class Prefix {
             "Lyk",
             "Lyr",
             "Myc",
+            "Myth",
             "Nyct",
             "Nyr",
             "Phyb",
@@ -344,7 +377,9 @@ public class Prefix {
             "Ry",
             "Ryl",
             "Ryn",
+            "Scy",
             "Syr",
+            "Syph",
             "Thyl",
             "Tyg",
             "Tym",
